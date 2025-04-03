@@ -93,8 +93,8 @@ Aşağıdaki adreslerden API dokümantasyonuna erişebilirsiniz:
 - Model tipi: `DecisionTreeRegressor`
 - Hedef değişken: `quantity`
 - Performans metrikleri:
-  - RMSE: (çıktıda yazdırılıyor)
-  - R² Skoru: (çıktıda yazdırılıyor)
+  - RMSE: 6.125713178802605
+  - R² Skoru: 0.9128970679447462
 
 ---
 
