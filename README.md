@@ -100,3 +100,5 @@ Aşağıdaki adreslerden API dokümantasyonuna erişebilirsiniz:
 
 ## Geliştirici
 
+- Hatice Kübra TEKİN
+- Ece Sude GÜNERHAN
