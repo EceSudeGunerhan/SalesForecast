@@ -30,6 +30,7 @@ pip install -r requirements.txt
 ```python
 DATABASE_URL = "postgresql://postgres:1234@localhost:5432/gyk2Northwind"
 ```
+---
 
 ## API Nasıl Çalıştırılır?
 
@@ -44,7 +45,7 @@ Aşağıdaki adreslerden API dokümantasyonuna erişebilirsiniz:
 
 ---
 
-## 🔮 API Uç Noktaları
+## API Uç Noktaları
 
 | Endpoint                | Method | Açıklama                              |
 |-------------------------|--------|----------------------------------------|
