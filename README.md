@@ -34,7 +34,7 @@ DATABASE_URL = "postgresql://postgres:1234@localhost:5432/gyk2Northwind"
 ## API Nasıl Çalıştırılır?
 
 ```bash
-uvicorn main:app --reload
+uvicorn northwind:app --reload
 ```
 
 Aşağıdaki adreslerden API dokümantasyonuna erişebilirsiniz:
