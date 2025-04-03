@@ -46,13 +46,14 @@ Aşağıdaki adreslerden API dokümantasyonuna erişebilirsiniz:
 
 ## 🔮 API Uç Noktaları
 
-| Endpoint           | Method | Açıklama                              |
-|--------------------|--------|----------------------------------------|
-| `/products`        | GET    | Tüm ürünleri listeler                 |
-| `/products/{id}`   | GET    | Belirli bir ürünü getirir             |
-| `/sales_summary`   | GET    | Ürün ve müşteri bazlı satış özetini döner |
-| `/predict`         | POST   | Tahmin yapar (ürün, müşteri, tarih bilgisi ile) |
-| `/retrain`         | POST   | Modeli yeniden eğitir (isteğe bağlı)  |
+| Endpoint                | Method | Açıklama                              |
+|-------------------------|--------|----------------------------------------|
+| `/products`             | GET    | Tüm ürünleri listeler                 |
+| `/products/{id}`        | GET    | Belirli bir ürünü getirir             |
+| `/sales_summary`        | GET    | Ürün ve müşteri bazlı satış özetini döner |
+| `/sales_summary_plot`   | GET    | Ürün ve müşteri bazlı satış özeti heatmap tablosunu indirir |
+| `/predict`              | POST   | Tahmin yapar (ürün, müşteri, tarih bilgisi ile) |
+| `/retrain`              | POST   | Modeli yeniden eğitir (isteğe bağlı)  |
 
 ---
 
