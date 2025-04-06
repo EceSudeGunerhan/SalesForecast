@@ -197,7 +197,7 @@ Bu yanıt, her müşteri için satılan her ürünün miktarını gösteren bir 
 Bu endpoint, satış özetini bir heatmap olarak döndürür. Görsel, `PNG` formatında bir dosya olarak sağlanır.
 
 **Yanıt:** (Dosya olarak)
-- Bir `PNG` dosyası döndürülür, bu dosya satış özetinin ısı haritasını içerir.
+- Bir `PNG` dosyası döndürülür, bu dosya satış özetinin heatmap içerir.
 
 ---
 
