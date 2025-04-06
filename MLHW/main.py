@@ -18,7 +18,7 @@ from fastapi.responses import StreamingResponse
 Base = declarative_base()
 
 # PostgreSQL Bağlantı Dizesi
-DATABASE_URL = "postgresql://hatic:hatic@localhost:5432/gky2"  # TODO : Dosyayı çağırırken bu bağlantı dizesini güncelleyin
+DATABASE_URL = "postgresql://postgres:1234@localhost:5432/gyk2Northwind"  # TODO : Dosyayı çağırırken bu bağlantı dizesini güncelleyin
 
 # Veritabanı bağlantısı
 engine = create_engine(DATABASE_URL, echo=True)  # echo=True logları görmek için
