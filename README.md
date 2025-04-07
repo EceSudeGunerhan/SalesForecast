@@ -242,8 +242,6 @@ Bu endpoint, satış özetini bir heatmap olarak döndürür. Görsel, `PNG` for
 
 ---
 
-=======
-
 ## Müşteri Bazlı Satış Özeti
 
 Aşağıdaki tablo, her bir müşterinin toplam sipariş sayısı ve bu sayıya göre ait olduğu segmenti göstermektedir:
