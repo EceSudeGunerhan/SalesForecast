@@ -212,13 +212,16 @@ class predict(BaseModel):
     order_day: int
     total_spent: float
 
-app = FastAPI()
+app = FastAPI(
+title="Sales Forecast API",
+version="1.0"
+)
 
-@app.get("/")
+@app.get("/",summary="Main Page", tags=["SalesForecast"])
 async def my_first_get_api():
     return {"message":"First FastAPI example"}
 
-@app.get("/products/{product_id}")
+@app.get("/products/{product_id}", tags=["SalesForecast"])
 def get_product(product_id: int):
     stmt = select(Product).where(Product.product_id == product_id)
     result = session.execute(stmt).fetchone()
@@ -227,7 +230,7 @@ def get_product(product_id: int):
     else:
         return {"message": "Product not found"}
     
-@app.get("/products")
+@app.get("/products", tags=["SalesForecast"])
 def get_all_products():
     stmt = select(Product)
     result = session.execute(stmt).fetchall()
@@ -249,7 +252,7 @@ def predict_quantity(predict:predict):
     }
 '''
 
-@app.post("/predict")
+@app.post("/predict", tags=["SalesForecast"])
 def predict_quantity(predict: predict):
     dt_model = joblib.load("hw.pkl")
 
@@ -280,7 +283,7 @@ def predict_quantity(predict: predict):
         }
     }
 
-@app.post("/retrain")
+@app.post("/retrain", tags=["SalesForecast"])
 def retrain_model():
     rmse, r2 = train_model(df)
     return {
@@ -289,7 +292,7 @@ def retrain_model():
         "r2_score": round(r2, 4)
     }
 
-@app.get("/sales_summary")
+@app.get("/sales_summary", tags=["SalesForecast"])
 def get_sales_summary():
     sales_summary = df.groupby(['customer_id', 'product_id']).agg({'quantity': 'sum'}).reset_index()
 
@@ -302,7 +305,7 @@ def get_sales_summary():
     # Return the table in JSON format for API response
     return {"sales_table": sales_table}
 
-@app.get("/sales_summary_plot")
+@app.get("/sales_summary_plot", tags=["SalesForecast"])
 def get_sales_summary_plot():
     # Grouping and pivoting the data as per your logic
     sales_summary = df.groupby(['customer_id', 'product_id']).agg({'quantity': 'sum'}).reset_index()
@@ -350,7 +353,6 @@ print(product_sales)
 
 
 # Hata yönetimi ve validasyon
-# Projenin requirements.txt ile dışa aktarılması
 
 # uvicorn main:app --reload
 # http://localhost:8000/docs  -> Swagger UI
@@ -358,4 +360,5 @@ print(product_sales)
 # http://localhost:8000/openapi.json -> OpenAPI JSON
 # Ctrl + C ile durdurabilirsiniz
 
+# Projenin requirements.txt ile dışa aktarılması
 # pip freeze > requirements.txt
