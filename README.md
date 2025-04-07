@@ -242,6 +242,73 @@ Bu endpoint, satış özetini bir heatmap olarak döndürür. Görsel, `PNG` for
 
 ---
 
+
+## Müşteri Bazlı Satış Özeti
+
+Aşağıdaki tablo, her bir müşterinin toplam sipariş sayısı ve bu sayıya göre ait olduğu segmenti göstermektedir:
+
+| customer_id | order_counts | Segment |
+|-------------|---------------|----------|
+| 0           | 12            | Bronz    |
+| 1           | 10            | Bronz    |
+| 2           | 17            | Bronz    |
+| 3           | 30            | Bronz    |
+| 4           | 52            | Silver   |
+| ...         | ...           | ...      |
+| 84          | 37            | Bronz    |
+| 85          | 19            | Bronz    |
+| 86          | 40            | Bronz    |
+| 87          | 17            | Bronz    |
+| 88          | 16            | Bronz    |
+
+Toplam 89 müşteri kaydı yer almaktadır.
+
+
+## Aylık Satış Özeti
+
+Her ay gerçekleşen toplam satış miktarlarını (adet olarak) gösteren özet tablo aşağıda sunulmuştur:
+
+| order_month | quantity |
+|-------------|----------|
+| 1           | 5867     |
+| 2           | 5247     |
+| 3           | 5835     |
+| 4           | 6592     |
+| 5           | 3085     |
+| 6           | 1635     |
+| 7           | 3516     |
+| 8           | 3183     |
+| 9           | 3467     |
+| 10          | 4417     |
+| 11          | 3591     |
+| 12          | 4882     |
+
+Bu tablo, satışların mevsimsel dağılımı hakkında genel bir fikir vermektedir.
+
+
+## Ürün Bazlı Satış Özeti
+
+Her bir ürünün toplam satış adedi ve toplam harcama tutarını gösteren özet tablo aşağıda sunulmuştur:
+
+| product_id | quantity | total_spent |
+|------------|----------|--------------|
+| 1          | 828      | 12788.10     |
+| 10         | 742      | 20867.34     |
+| 11         | 706      | 12901.77     |
+| 12         | 344      | 12257.66     |
+| 13         | 891      | 4960.44      |
+| ...        | ...      | ...          |
+| 75         | 1155     | 8177.49      |
+| 76         | 981      | 15760.44     |
+| 77         | 791      | 9171.63      |
+| 8          | 372      | 12772.00     |
+| 9          | 95       | 7226.50      |
+
+Toplam 77 ürünün satış bilgisi özetlenmiştir.
+
+
+---
+
 ## Geliştirici
 
 - Hatice Kübra TEKİN
