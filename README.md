@@ -222,7 +222,7 @@ Bu endpoint, satış özetini bir heatmap olarak döndürür. Görsel, `PNG` for
 
 ```json
 {
-  "prediction": "Rejected",
+  "predicted_quantity": 0.17,
   "details": {
     "product_id": 1,
     "customer_id": 10
